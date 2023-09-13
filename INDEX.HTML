@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+     *{
+       margin: 0;
+       padding: 0;
+       font-family: Arial, Helvetica, sans-serif;
+    } 
+    .hero{
+        width: 100%;
+        height: 100vh;
+        background-image: url(images/background.png);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        overflow: hidden;
+     }
+
+     .logo{
+        width:100px;
+        cursor: pointer;
+        background-blend-mode: multiply;
+     }
+     .navbar{
+        width: 85%;
+        height: 15%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+     }
+     button{
+        color:#fbfcfd;
+        padding: 10px 25px;
+        background: transparent;
+        border: 1px solid #fff;
+        border-radius: 20px;
+        outline: none;
+        font-size: 25px;
+        cursor: pointer;
+     }
+.content{
+    color:#fbfcfd;
+    position: absolute;
+    top:50%;
+    left:8%;
+    transform: translateY(-50%);
+    z-index: 2;
+
+}
+small{
+    font-size: medium;
+    line-height: normal;
+}
+h1{
+    font-size: 80px;
+    margin: 10px 0 30px;
+    line-height: 80px;
+}
+.side-bar{
+    width: 50px;
+    height: 100vh;
+     background: linear-gradient(#00545d,#000729);
+    position: absolute;
+    right: 0;
+    top:0;
+}.menu{
+    display: block;
+    width:25px;
+    margin: 40px auto 0;
+    cursor: pointer;
+}
+.social-link img,.useful-link img{
+width: 25px;
+margin: 5px auto;
+cursor: pointer;
+}
+.social-link{
+    width: 50px;
+    text-align: center;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
+.useful-link{
+    width: 50px;
+    text-align: center;
+    position: absolute;
+    bottom: 30px;
+}
+    .bubble img{
+        width: 50px;
+        animation: bubble 5s alternate-reverse infinite;
+    }
+    .bubble{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        bottom: -100px;
+    }
+     @keyframes bubble{
+        0%{
+            transform: translateY(0);
+            opacity: 0;
+        }
+        50%{
+            
+            opacity: 1;
+        }
+        70%{
+        
+            opacity: 1;
+        }
+        100%{
+            transform: translateY(-87vh);
+            opacity: 0;
+        }
+    } 
+.bubble img:nth-child(1){
+animation-delay: 2s;
+width: 25px;
+}
+.bubble img:nth-child(2){
+animation-delay: 1s;
+}
+.bubble img:nth-child(3){
+animation-delay: 2s;
+width: 25px;
+}
+.bubble img:nth-child(4){
+animation-delay: 4s;
+}
+.bubble img:nth-child(5){
+animation-delay: 2s;
+width: 40px;
+}
+.bubble img:nth-child(6){
+animation-delay: 5s;
+}
+.bubble img:nth-child(7){
+animation-delay: 6s;
+width: 28px;
+}
+
+
+</style>
+<body>
+    <div class="hero">
+        <div class="navbar">
+            <img src="logo3.png" class="logo">
+            <button type="button">About</button>
+        </div>
+        <div class="content">
+            <small>welcome to our</small>
+            <h1>CAREER COMPASS</h1>
+            <button type="button">PLAY</button>
+        </div>
+<div class="side-bar">
+    <img src="images/menu.png" class="menu">
+    <div class="social-link">
+ <img src="images/fb.png">
+ <img src="images/ig.png">
+ <img src="images/tw.png">
+  </div>
+
+  <div class="useful-link">
+    <img src="images/share.png">
+    <img src="images/info.png">
+    
+     </div>
+</div>
+
+<div class="bubble">
+    <img src="images/bubble.png">
+    <img src="images/bubble.png">
+    <img src="images/bubble.png">
+    <img src="images/bubble.png">
+    <img src="images/bubble.png">
+    <img src="images/bubble.png">
+    <img src="images/bubble.png">
+</div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
