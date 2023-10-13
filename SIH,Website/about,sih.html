@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About page</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Baloo Bhai', cursive;
+        /* font-family: Arial, Helvetica, sans-serif; */
+        /* background-image: url(bg.jpg); */
+        /* background-image: linear-gradient(180deg,blue,purple); */
+    }
+
+    .hero {
+        width: 100%;
+        height: 170vh;
+        background-image: url(bg\,1\,tan.jpg);
+        background-size: cover;
+        background-position: center;
+
+        overflow: hidden;
+        /* position: fixed; */
+        /* background-image: linear-gradient(180deg,blue,purple); */
+        /* margin:20px; */
+    }
+
+    .about-content {
+        /* top:360px; */
+        text-align: center;
+        position: relative;
+        padding-left: 250px;
+        padding-right: 250px;
+        position: absolute;
+        /* text-decoration: dotted; */
+        /* background-color: gray; */
+    }
+
+    .heading {
+        display: flex;
+        align-items: row;
+        justify-content: center;
+    }
+
+    .heading img {
+        width: 133px;
+        height: 150px;
+    }
+
+    h1 {
+        color: whitesmoke;
+        font-size: 40px;
+        font-family: 'Baloo Bhai', cursive;
+        /* margin-top:30px; */
+        margin-bottom: 15px;
+
+        font-size: 40px;
+        text-shadow: 4px 5px 10px gray;
+        /* margin: 17px 3px 4px; */
+        /* line-height: 80px; */
+    }
+
+    h1:hover {
+        text-shadow: 6px 6px 10px gray;
+        /* color: #e678f485; */
+        color: rgba(0, 0, 0, 0.736);
+    }
+
+    .about-us {
+        font-size: 70px;
+        font-family: 'Baloo Bhai', cursive;
+        color: whitesmoke;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        text-decoration: dotted;
+        /* background-color: gray; */
+    }
+
+    h2 {
+        font-size: 25px;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: lighter;
+        margin-bottom: 30px;
+        /* background-color: black; */
+        opacity: 1;
+        /* margin-bottom: ; */
+    }
+
+    p {
+        margin: -125px 25px;
+    }
+
+
+    /* BUBBLE ANIMATION */
+    .bubble img {
+        width: 50px;
+        animation: bubble 5s alternate-reverse infinite;
+    }
+
+    .bubble {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        bottom: -100px;
+    }
+
+    @keyframes bubble {
+        0% {
+            transform: translateY(0);
+            opacity: 0;
+        }
+
+        50% {
+
+            opacity: 1;
+        }
+
+        70% {
+
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(-87vh);
+            opacity: 0;
+        }
+    }
+
+    .bubble img:nth-child(1) {
+        animation-delay: 2s;
+        width: 25px;
+    }
+
+    .bubble img:nth-child(2) {
+        animation-delay: 1s;
+    }
+
+    .bubble img:nth-child(3) {
+        animation-delay: 2s;
+        width: 25px;
+    }
+
+    .bubble img:nth-child(4) {
+        animation-delay: 4s;
+    }
+
+    .bubble img:nth-child(5) {
+        animation-delay: 2s;
+        width: 40px;
+    }
+
+    .bubble img:nth-child(6) {
+        animation-delay: 5s;
+    }
+
+    .bubble img:nth-child(7) {
+        animation-delay: 6s;
+        width: 28px;
+    }
+    /* BUBBLE ANIMATION END*/
+</style>
+
+<body>
+    <div class="hero">
+        <div class="about-content">
+
+            <div class="heading">
+                <img src="avtar/2.png">
+                <h1 class="about-us"> ABOUT US</h1>
+                <img src="avtar/1.png">
+            </div>
+            
+            <h2>
+                Welcome to Career Compass, where the future of career guidance is personalized, precise, and powered by
+                AI. We are passionate about helping individuals make informed career decisions and embark on journeys
+                that align with their aspirations and potential. Our AI-based career counseling web application
+                leverages cutting-edge generative AI and machine learning to revolutionize the way you navigate your
+                professional path.
+            </h2>
+            <br>
+
+            <h1>Our Mission</h1>
+            <H2>
+
+                Our mission is simple yet profound: To transform the way individuals make career decisions by providing
+                them with personalized guidance, recommending detailed career paths, and offering real-time job market
+                insights. We are committed to helping you make informed career choices that lead to personal and
+                professional success.
+            </H2>
+            <br>
+
+            <h1>The Power of Generative AI and Machine Learning</h1>
+            <br>
+            <h2>Career Compass leverages the latest advancements in generative AI and machine learning to offer a level
+                of career counseling that's truly personalized and dynamic. Our AI algorithms don't just provide generic
+                advice; they understand your unique strengths, interests, and aspirations to offer recommendations
+                tailored to your individual needs
+            </h2>
+            <br>
+
+            <h1>Our Team
+            </h1>
+            <h2>Behind the scenes, we have a dedicated team of experts in AI, machine learning, career counseling, and
+                education. Our collective passion for helping you succeed drives us to continuously improve and
+                innovate. We are here to support you at every step of your journey.</h2>
+        </div>
+
+        <div class="bubble">
+            <img src="bubble.png">
+            <img src="bubble.png">
+            <img src="bubble.png">
+            <img src="bubble.png">
+            <img src="bubble.png">
+            <img src="bubble.png">
+            <img src="bubble.png">
+        </div>
+    </div>
+</body>
+
+</html>

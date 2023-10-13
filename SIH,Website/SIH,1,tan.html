@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <title>Career Campass</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            font-family: 'agency fb';
+            /* background: url("icon-3329995_1280.jpg") no-repeat; */
+            background-position: 50%;
+            background-size: cover;
+            overflow: hidden;
+            background-image: url("bg\,1\,tan.jpg");
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .nav {
+            width: 135px;
+            height: 106px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: absolute;
+            top: 235px;
+        }
+
+        .logo {
+            flex: 0 0 50%;
+            /* background: #FFEB00; */
+            display: flex;
+            justify-content: left;
+            align-items: left;
+            text-align: center;
+            width: 90px;
+        }
+
+        .logo img {
+            width: 110px;
+            padding: 10px;
+            margin-top: 20px;
+            margin-left: 30px;
+        }
+
+        .logo h1 {
+            font-weight: 300;
+            text-transform: uppercase;
+            font-size: 16px;
+            line-height: 2;
+        }
+
+        .logo span {
+            font-size: 60px;
+            line-height: 1;
+        }
+
+        .menu-links {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            text-align: right;
+            padding-top: 50px;
+        }
+
+        .menu-links ul {
+            width: 100%;
+        }
+
+        .menu-links ul li {
+            padding: 10px;
+            color: #494949;
+            font-size: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .menu-links ul li:hover {
+            background: #494949;
+            color: #fff;
+        }
+
+        .scrolldown {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            transform: rotate(-90deg);
+            position: absolute;
+            top: 350px;
+            left: 5px;
+            font-size: 25px;
+        }
+
+        .scrolldown::before {
+            display: inline-block;
+            content: "";
+            border-top: 1px solid #000;
+            width: 65px;
+            margin: 0 10px 0 0;
+            transform: translateY(10px);
+        }
+
+        .text {
+            position: absolute;
+            top: 25%;
+            right: 180px;
+            transform: translateY(-50%);
+            text-align: right;
+            /* color: rgba(255, 238, 0, 0.864); */
+            color: whitesmoke;
+        }
+
+        .text .title {
+            font-size: 150px;
+            text-shadow: 6px 7px 10px rgba(0, 0, 0, 0.864);
+        }
+
+        .text p {
+            color: #000;
+            font-size: 20px;
+        }
+
+        .watchnow {
+            position: absolute;
+            top: 60%;
+            right: 0;
+            transform: translateY(-50%);
+            background: #68418c;
+            padding: 30px 180px 30px 30px;
+        }
+
+        .watchnow a {
+            text-decoration: none;
+            color: white;
+            font-size: 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            border-bottom: 3px solid whitesmoke;
+            padding-bottom: 5px;
+        }
+
+        .fa-play {
+            color: #fff;
+            font-size: 30px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .media {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 20px;
+        }
+
+        .media ul li {
+            display: inline-block;
+            padding: 20px;
+            font-size: 20px;
+            color: #494949;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .media ul li:hover {
+            background: #FFEB00;
+        }
+
+        .ellipse-container {
+            width: 608px;
+            height: 608px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            margin: 0 auto;
+            z-index: -1;
+        }
+
+        .ellipse {
+            position: absolute;
+            top: 0;
+            border-radius: 50%;
+            border-style: solid;
+        }
+
+        .ellipse.thin {
+            width: 100%;
+            height: 100%;
+            border-width: 1px;
+            border-color: #494949;
+            opacity: .5;
+        }
+
+        .ellipse.thick {
+            width: 93%;
+            height: 93%;
+            border-width: 10px;
+            border-color: #fff;
+            transform: rotate(-45deg);
+            top: 12px;
+            left: 12px;
+        }
+
+        .ellipse.yellow {
+            width: 93%;
+            height: 93%;
+            border-width: 10px;
+            border-color: #884cc0 transparent;
+            transform: rotate(-45deg);
+            top: 12px;
+            left: 12px;
+            animation: ellipseRotate 15s ease-in-out infinite;
+        }
+
+        @keyframes ellipseRotate {
+            0% {
+                transform: rotate(-45deg);
+            }
+
+            100% {
+                transform: rotate(-405deg);
+            }
+        }
+
+        .circle1,
+        .circle2 {
+            border-style: solid;
+            width: 64px;
+            height: 64px;
+            border-width: 1px;
+            border-color: rgba(0, 0, 0, .5);
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .circle1 {
+            top: 150px;
+            left: 150px;
+        }
+
+        .circle2 {
+            bottom: 150px;
+            right: 130px;
+        }
+
+        .circle1::before,
+        .circle1::after,
+        .circle2::before,
+        .circle2::after {
+            content: '';
+            border-radius: 50%;
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .circle1::before,
+        .circle2::before {
+            width: 12px;
+            height: 12px;
+            background: #fff;
+            z-index: 1;
+        }
+
+        .circle1::after,
+        .circle2::after {
+            width: 40px;
+            height: 40px;
+            background: #FFEB00;
+        }
+
+        .circle1 span,
+        .circle2 span {
+            position: absolute;
+            top: 25px;
+            width: 100px;
+            font-size: 14px;
+        }
+
+        .circle1 span {
+            left: 75px;
+        }
+
+        .circle2 span {
+            left: -90px;
+        }
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            /* background: #3556dc88; */
+            /* background-color: #a78295; */
+            /* background-color: #a2678a; */
+            background-color: #884cc0;
+            top: 0%;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay h1 {
+            font-size: 100px;
+            letter-spacing: 20px;
+        }
+
+        .overlay span {
+            font-size: 30px;
+            letter-spacing: 3px;
+        }
+
+        .right img {
+            width: 330px;
+            left: 142px;
+            top: 58px;
+            height: 480px;
+            position: relative;
+            /* z-index: 999; */
+            cursor: pointer;
+            transition: 0.3s ease;
+            border-radius: 8px;
+            /* box-shadow: 10px 9px 10px rgba(235, 235, 10, 0.921); */
+        }
+
+        .menu-links a {
+            text-decoration: none;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay">
+        <h1>Career Compass</h1>
+        <span>Make Your Future Bright</span>
+    </div>
+
+    <div class="wrapper">
+
+        <div class="logo">
+            <img src="logo1,tan.png">
+        </div>
+
+        <div class="nav">
+            <div class="menu-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="scrolldown">Be Productive</div>
+        </div>
+
+        <div class="text">
+            <div class="title">Career Compass</div>
+            <p><b>Enhance your future by choosing the right career path <br> and release your full potential.</b></p>
+        </div>
+
+        <div class="watchnow">
+            <i class="fa fa-play"></i>
+            <a href="#">Lets PLay</a>
+        </div>
+
+        <div class="media">
+            <ul>
+                <li><i class="fa fa-facebook"></i></li>
+                <li><i class="fa fa-twitter"></i></li>
+                <li><i class="fa fa-instagram"></i></li>
+            </ul>
+        </div>
+
+        <div class="ellipse-container">
+            <div class="ellipse thin"></div>
+            <div class="ellipse thick"></div>
+            <div class="ellipse yellow"></div>
+            <!-- <div class="circle1"><span>Maecenas purus at</span></div> -->
+            <!-- <div class="circle2"><span>Fringilla Maecenas</span></div> -->
+            <div class="right flex3">
+                <img src="logo1,tan.png" alt="">
+                <!-- <img src="icon-3329995_1280.jpg" alt="meri_photu png"> -->
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+
+<script>
+
+    TweenMax.to(".overlay h1", 2, {     //Idhr 2 ki jagah 4 krna hai
+        opacity: 0,
+        y: -60,
+        ease: Expo.easeInOut
+    })
+
+    TweenMax.to(".overlay span", 2, {     //Idhr 2 ki jagah 4 krna hai
+        delay: .3,
+        opacity: 0,
+        y: -60,
+        ease: Expo.easeInOut
+    })
+
+    TweenMax.to(".overlay", 2, {      //Idhr 2 ki jagah 4 krna hai
+        delay: 1,
+        top: "-100%",
+        ease: Expo.easeInOut
+    })
+
+    TweenMax.from(".ellipse-container", 1, {      //Idhr 1 ki jagah 3 krna hai
+        delay: 2,
+        opacity: 0,
+        ease: Expo.easeInOut
+    })
+                    //  Overlay (SHUTTER) end
+
+
+
+    TweenMax.from(".yellow", 1, {
+        delay: 3.5,
+        opacity: 0,
+        ease: Expo.easeInOut
+    })
+
+    TweenMax.from(".circle1", 1, {
+        delay: 2.4,
+        opacity: 0,
+        ease: Expo.easeInOut
+    })
+
+    TweenMax.from(".circle2", 1, {
+        delay: 2.6,
+        opacity: 0,
+        ease: Expo.easeInOut
+    })
+
+    TweenMax.from(".logo", 1, {
+        delay: 3,
+        opacity: 0,
+        y: -100,
+        ease: Expo.easeInOut
+    })
+
+    TweenMax.staggerFrom(".menu-links ul li", 1, {
+        delay: 3.2,
+        opacity: 0,
+        x: -100,
+        ease: Expo.easeInOut
+    }, 0.08)
+
+    TweenMax.from(".scrolldown", 1, {
+        delay: 3.4,
+        opacity: 0,
+        y: 100,
+        ease: Expo.easeInOut
+    })
+
+    TweenMax.from(".text .title", 1, {
+        delay: 3,
+        opacity: 0,
+        x: 200,
+        ease: Expo.easeInOut
+    })
+
+    TweenMax.from(".text p", 1, {
+        delay: 3.2,
+        opacity: 0,
+        x: 200,
+        ease: Expo.easeInOut
+    })
+
+    TweenMax.from(".watchnow", 1, {
+        delay: 3.4,
+        opacity: 0,
+        x: 200,
+        ease: Expo.easeInOut
+    })
+
+    TweenMax.staggerFrom(".media ul li", 1, {
+        delay: 3,
+        opacity: 0,
+        y: 100,
+        ease: Expo.easeInOut
+    }, 0.08)
+</script>
+
+</html>

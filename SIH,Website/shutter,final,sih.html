@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <title>shutter final page</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            font-family: 'agency fb';
+            /* background: url("icon-3329995_1280.jpg") no-repeat; */
+            background-position: 50%;
+            background-size: cover;
+            overflow: hidden;
+            background-image: url(bg\,1\,tan.jpg);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            /* background: #3556dc88; */
+            /* background-color: #a78295; */
+            /* background-color: #a2678a; */
+            background-color: #884cc0;
+            top: 0%;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay h1 {
+            font-size: 100px;
+            letter-spacing: 20px;
+        }
+
+        .overlay span {
+            font-size: 30px;
+            letter-spacing: 3px;
+        }
+
+        #overlay_image {
+            width: 250px;
+            height: 300px;
+        }
+
+
+        @keyframes bubble {
+            0% {
+                transform: translateY(0);
+                opacity: 0;
+            }
+
+            50% {
+
+                opacity: 1;
+            }
+
+            70% {
+
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-87vh);
+                opacity: 0;
+            }
+        }
+
+        .bubble img:nth-child(1) {
+            animation-delay: 2s;
+            width: 25px;
+        }
+
+        .bubble img:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .bubble img:nth-child(3) {
+            animation-delay: 2s;
+            width: 25px;
+        }
+
+        .bubble img:nth-child(4) {
+            animation-delay: 4s;
+        }
+
+        .bubble img:nth-child(5) {
+            animation-delay: 2s;
+            width: 40px;
+        }
+
+        .bubble img:nth-child(6) {
+            animation-delay: 5s;
+        }
+
+        .bubble img:nth-child(7) {
+            animation-delay: 6s;
+            width: 28px;
+        }
+
+        .bubble img {
+            width: 50px;
+            animation: bubble 5s alternate-reverse infinite;
+        }
+
+        .bubble {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: absolute;
+            bottom: -100px;
+        }
+
+        .about-content {
+            /* top:360px; */
+            text-align: center;
+            position: relative;
+            padding-left: 300px;
+            padding-right: 250px;
+            position: absolute;
+            /* text-decoration: dotted; */
+            /* background-color: gray; */
+        }
+
+        .about-content em {
+            font-weight: lighter;
+        }
+
+        .heading {
+            display: flex;
+            align-items: row;
+            justify-content: center;
+        }
+
+        .heading img {
+            width: 144px;
+            height: 188px;
+        }
+
+        .about-us {
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: whitesmoke;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            text-decoration: dotted;
+            /* background-color: gray; */
+        }
+
+        b {
+            font-size: 44px;
+        }
+
+        .path {
+            display: flex;
+            justify-content: center;
+            align-items: column;
+            position: relative;
+            top: 200px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            left: 180px;
+        }
+
+        .path_items li {
+            top: 80px;
+            position: relative;
+            left: -720px;
+            color: white;
+            padding-bottom: 20px;
+            font-size: 38px;
+            font-family: 'Baloo Bhai', cursive;
+
+            /* font-family: 'Times New Roman', Times, serif; */
+            /* font-family: 'Poppins', sans-serif; */
+            /* justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px; */
+        }
+
+        .path_items li:hover {
+            text-decoration: underline;
+            text-shadow: 6px 5px 11px gray;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        b{
+            text-shadow: 6px 6px 10px gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay">
+        <img id="overlay_image" src="avtar/4.png">
+        <h1>Career Compass</h1>
+        <span>Make Your Future Bright</span>
+    </div>
+
+    <div class="hero">
+
+        <div class="about-content">
+            <div class="heading">
+                <img src="avtar/7.png">
+                <h1 class="about-us"> <b>CONGRATULATIONS!!</b> <br><em>Here are your personalized career options</em>
+                </h1>
+                <img src="avtar/9.png">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="path">
+        <h1>Analyzing your response, we suggest you following career paths...</h1>
+        <ul class="path_items">
+            <li><b>-> </b>Computer Network</li>
+            <li><b>-> </b>Consumer Services</li>
+            <li><b>-> </b>Software Engineering</li>
+            <li><b>-> </b>Telecommunication</li>
+            <li><b>-> </b>DataBase Engineering</li>
+        </ul>
+    </div>
+
+    <div class="bubble">
+        <img src="bubble.png">
+        <img src="bubble.png">
+        <img src="bubble.png">
+        <img src="bubble.png">
+        <img src="bubble.png">
+        <img src="bubble.png">
+        <img src="bubble.png">
+    </div>
+
+</body>
+
+
+<script>
+    TweenMax.to(".overlay h1", 6, {
+        opacity: 0,
+        y: -60,
+        ease: Expo.easeInOut
+    })
+
+    TweenMax.to(".overlay span", 6, {
+        delay: .3,
+        opacity: 0,
+        y: -60,
+        ease: Expo.easeInOut
+    })
+
+    TweenMax.to(".overlay", 5, {
+        delay: 1,
+        top: "-100%",
+        ease: Expo.easeInOut
+    })
+</script>
+
+</html>
